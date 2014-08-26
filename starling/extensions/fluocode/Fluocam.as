@@ -18,8 +18,8 @@ package starling.extensions.fluocode{
 
 	public class Fluocam extends Sprite 
 	{
-		public var targetCam:Sprite;
-		public var explorer:Sprite=new Sprite();
+		public var targetCam:DisplayObject;
+		public var explorer:DisplayObject=new Sprite();
 		private var targetCamLink:Sprite=new Sprite();
 
 		private var correctionX:Number=0;
@@ -59,7 +59,7 @@ package starling.extensions.fluocode{
 		private var tmpLayer:Sprite;
 		
 
-		private var controlTo:Sprite;
+		private var controlTo:DisplayObject;
 		private var toControlSw:Boolean;
 		private var dragAndZoom:Boolean;
 		
@@ -178,14 +178,14 @@ package starling.extensions.fluocode{
 		}
 
 
-		public function changeTarget(explorer:Sprite, toMark:Sprite=null, refreshRate:int=1):void 
+		public function changeTarget(explorer:DisplayObject, toMark:Sprite=null, refreshRate:int=1):void
 		{
 			this.refreshRate=refreshRate;
 			targetCam = explorer;
 		}
 	
 
-		public function goToTarget(explorer:Sprite, toMark:Sprite=null, controlTo:Sprite=null):void
+		public function goToTarget(explorer:DisplayObject, toMark:DisplayObject=null, controlTo:DisplayObject=null):void
 		{
 			if(controlTo!=null){
 				this.controlTo=controlTo;
@@ -258,7 +258,7 @@ package starling.extensions.fluocode{
 		}
 
 
-		public function targetToTarget(trgO:Sprite,trg:Sprite):void 
+		public function targetToTarget(trgO:DisplayObject,trg:DisplayObject):void
 		{
 		
 			targetCam = targetCamLink;

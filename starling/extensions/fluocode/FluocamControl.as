@@ -1,8 +1,9 @@
 package starling.extensions.fluocode {
 
 	import starling.core.Starling;
-	
-	import starling.display.Sprite;
+import starling.display.DisplayObject;
+
+import starling.display.Sprite;
 	import starling.events.Event;
 	import starling.events.Touch;
 	import starling.events.TouchEvent;
@@ -53,7 +54,7 @@ package starling.extensions.fluocode {
 		public var accuracyDragForce:int=300;
 
 		public var canvas:Sprite;
-		public var targetCam:Sprite
+		public var targetCam:DisplayObject;
 		
 		private var touch:Touch;
 		private var pos:Point;
@@ -69,7 +70,7 @@ package starling.extensions.fluocode {
 		}
 		
 
-		public function init(camX:Number, camY:Number, world:Sprite, targetCam:Sprite):void
+		public function init(camX:Number, camY:Number, world:Sprite, targetCam:DisplayObject):void
 		{
 		
 			canvas=world;
